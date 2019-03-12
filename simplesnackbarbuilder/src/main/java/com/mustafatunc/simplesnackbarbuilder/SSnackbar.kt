@@ -88,7 +88,7 @@ abstract class SSnackbar protected constructor() {
         /**
          * Sets the main text and its color using resource IDs
          * */
-        fun setTextWithColorResource(@StringRes stringId: Int, @ColorRes colorId: Int) = apply {
+        fun setTextResourceWithColorResource(@StringRes stringId: Int, @ColorRes colorId: Int) = apply {
             text = getString(stringId)
             textColor = getColor(colorId)
         }
@@ -102,11 +102,35 @@ abstract class SSnackbar protected constructor() {
         }
 
         /**
+         * Sets the main text and its color
+         * */
+        fun setTextWithColorResource(text: CharSequence, @ColorRes colorId: Int) {
+            this.text = text
+            textColor = getColor(colorId)
+        }
+
+
+        /**
          *  Sets the text and color
          * */
-        fun setText(text: CharSequence, color: Int) = apply {
+        fun setTextWithColor(text: CharSequence, color: Int) = apply {
             this.text = text
             textColor = color
+        }
+
+
+        /**
+         *  Sets the text color
+         * */
+        fun setTextColor(color: Int) {
+            textColor = color
+        }
+
+        /**
+         *  Sets the text color with resource id
+         * */
+        fun setTextColorResource(@ColorRes colorId: Int) {
+            textColor = getColor(colorId)
         }
 
         /**
