@@ -62,7 +62,7 @@ allprojects {
 
 dependencies {
     ...
-    implementation 'com.github.mustafatunc:simple_snackbar_builder:0.1.0'
+    implementation 'com.github.mustafatunc:simple_snackbar_builder:0.1.1'
 }
 ```
 
