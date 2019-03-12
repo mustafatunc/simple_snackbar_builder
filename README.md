@@ -39,14 +39,14 @@ SSnackbar.Builder(this, snack, SSnackbar.SnackType.BOTTOM)
 
 How it looks:
 <p/>
-<img src="https://github.com/mustafatunc/simple_flexible_snackbar_builder/blob/master/app/snackbars_gif.gif" width="300">
+<img src="https://github.com/mustafatunc/simple_snackbar_builder/blob/master/app/snackbars_gif.gif" width="300">
 
 <p/>
 <p/>
 
 Class Diagram (Not exactly)
 <p/>
-<img src="https://github.com/mustafatunc/simple_flexible_snackbar_builder/blob/master/app/snackclass.jpg" width="500">
+<img src="https://github.com/mustafatunc/simple_snackbar_builder/blob/master/app/snackclass.jpg" width="500">
 <p/>
 <p/>
 
