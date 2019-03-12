@@ -1,4 +1,4 @@
-# Simple Flexible Snackbar Builder - Kotlin
+# Simple Snackbar Builder - Kotlin
 A minimal way to create snackbars using the Builder Pattern. 
 You can create both Native Snackbars and [Top Snackbars](https://github.com/AndreiD/TSnackBar) 
 
@@ -7,7 +7,7 @@ How to use:
 ```kotlin
 //Create Top Snackbar
 val snack = findViewById(R.id.your_coordinator_layout_id) // can be a Frame Layout too
-SFSnackbar.Builder(this, snack, SFSnackbar.SnackType.TOP)
+SSnackbar.Builder(this, snack, SSnackbar.SnackType.TOP)
             .backgroundColor(Color.YELLOW)
             .setText("This is the first snack, got it?", Color.BLACK)
             .setActionWithColor("GOTCHA", Color.BLUE, listener)
@@ -15,11 +15,11 @@ SFSnackbar.Builder(this, snack, SFSnackbar.SnackType.TOP)
             .show()
             
 // Without action
-SFSnackbar.Builder(this, snack, SFSnackbar.SnackType.TOP)
+SSnackbar.Builder(this, snack, SSnackbar.SnackType.TOP)
             .backgroundColorResource(R.color.secondsnackcolor)
             .setTextWithColor(R.string.secondsnackbartext, Color.BLUE)
-            .textAlignment(SFSnackbar.Alignment.CENTER)
-            .setDuration(SFSnackbar.Duration.LENGTH_LONG)
+            .textAlignment(SSnackbar.Alignment.CENTER)
+            .setDuration(SSnackbar.Duration.LENGTH_LONG)
             .build()
             .show()
 ```
@@ -28,11 +28,11 @@ or
 
 ```kotlin
 //Create Regular Snackbar
-SFSnackbar.Builder(this, snack, SFSnackbar.SnackType.BOTTOM)
+SSnackbar.Builder(this, snack, SSnackbar.SnackType.BOTTOM)
             .backgroundColor(Color.BLACK)
             .setText("Something is done successfully", Color.YELLOW)
             .setAction("OKAY")
-            .setDuration(SFSnackbar.Duration.LENGTH_SHORT) // this has no effect
+            .setDuration(SSnackbar.Duration.LENGTH_SHORT) // this has no effect
             .build()
             .show()
 ```
@@ -50,5 +50,21 @@ Class Diagram (Not exactly)
 <p/>
 <p/>
 
+Don't rely on it that much, but if you want to add this to your project this is how:
 
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+    ...
+    implementation 'com.github.mustafatunc:simple_snackbar_builder:0.1.0'
+}
+```
+
+As I develop, it'll be more reliable.
 
